@@ -35,15 +35,8 @@ def cityreader(cities=[]):
     next(csv_reader)
 
     for row in csv_reader:
-      cities.append(City(row[0], row[3], row[4]))
-      # return cities
-      # if line_count == 0:
-      #   print(f'Column names are {", ".join(row)}')
-      #   line_count += 1
-      # else:
-      #   cities.append(City(row[0], float(row[3]), float(row[4])))
-      #   line_count += 1
-      # return cities
+      cities.append(City(row[0], float(row[3]), float(row[4])))
+  return cities
 
 cityreader(cities)
 
